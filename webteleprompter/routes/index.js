@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'EoZ WebTelePrompter', layout: 'base' });
 });
 
+// router.get('about', function(req, res, next){
+//     res.render('/about', {title: 'About WTP', layout: 'base'});
+// });
+
 module.exports = router;

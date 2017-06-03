@@ -3,14 +3,37 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+
   </head>
+
   <body>
-    {{{body}}}
+      <div data-sticky-container>
+          <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%; background-color:black" data-top-anchor="1" data-btm-anchor="content:bottom" >
+              <div class="title-bar-left">
+                  <p style="margin: 10px; font-size:15px">
+                      <b>{{title}}</b>
+                  </p>
+              </div>
+              <div class="title-bar-right" style="margin-top: 10px;">
+                  <a href="/"><b>Home</b> &nbsp;&nbsp;</a>
+                  <a href="/about"><b>About</b> &nbsp;&nbsp;</a>
+              </div>
+          </div>
+      </div>
+      {{{body}}}
   </body>
+
   <footer>
       <hr />
-      <p>
-          Testing out some footer layouts
-      </p>
+      <div class="row">
+          <p>
+              Powered with EoZ Programming.
+          </p>
+      </div>
+
   </footer>
 </html>

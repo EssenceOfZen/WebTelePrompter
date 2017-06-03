@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+//The file /bin/www is the application entry point! The very first thing this
+//does is require() the "real" application entry point (app.js, in the project root)
+//that sets up and returns the express() application object.
+
 /**
  * Module dependencies.
  */

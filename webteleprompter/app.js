@@ -1,3 +1,7 @@
+//This file creates an express application object (named app, by convention),
+//sets up the application with various settings and middleware, and then exports
+//the app from the module.
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,8 +10,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
 
+var fs = require('fs');
+var files = fs.readdirSync('/');
+//console.log(files);
+
 var index = require('./routes/index');
 var users = require('./routes/users');
+var about = require('./routes/about');
+var teleprompter = require('./routes/teleprompter');
 
 var app = express();
 
@@ -31,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/about', about);
+app.use('/teleprompter', teleprompter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
